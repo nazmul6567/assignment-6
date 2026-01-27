@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
 
     <!-- daisy ui -->
@@ -15,17 +15,107 @@
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- font awesome --> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- css link -->
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
+  <body>
+    <header>
+      <!-- navbar -->
+      <div
+        class="navbar bg-base-100 shadow-sm bg-green-600 text-white px-4 md:px-13 py-6"
+      >
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow bg-[#FACC15] font-semibold"
+            >
+              <li><a href="">About</a></li>
+              <li><a href="">Gallery</a></li>
+              <li><a href="">Plant a Tree</a></li>
+            </ul>
+          </div>
+          <a class="font-bold text-xl">
+            <h2>Green Earth</h2>
+          </a>
+        </div>
 
-<body>
-    
+        <div class="navbar-center hidden lg:flex">
+          <ul class="flex gap-5 px-1">
+            <li><a href="" class="hover:underline font-medium">About</a></li>
+            <li><a href="" class="hover:underline font-medium">Gallery</a></li>
+            <li><a href="" class="hover:underline font-medium">Plant a Tree</a></li>
+          </ul>
+        </div>
+
+        <div class="navbar-end">
+          <button
+            class="h-10 w-32 bg-[#FACC15] rounded-full font-medium text-[#15803D] hover:bg-yellow-500"
+          >
+            Plant a Tree
+          </button>
+        </div>
+      </div>
+
+      <!-- banner -->
+      <div class="bg-[#CFF0DC] mx-2 my-2 flex justify-between">
+        <div class="">
+          <img src="./assets/hero-leaf1.png" alt="" />
+        </div>
+
+        <div class="flex flex-col items-center justify-center gap-1 lg:gap-5 text-center">
+          <h1 class="lg:text-4xl  font-bold ">Plant a Tree, Grow a Future</h1>
+          <h2 class="lg:px-8 text-sm md:text-lg">
+            Join our mission to plant 1 million trees and make the Earth greener
+            for future generations.
+          </h2>
+
+          <div class="flex justify-center items-center">
+            <button
+            class="md:h-10 w-32 bg-[#FACC15] rounded-full font-medium text-[#15803D] hover:bg-yellow-500 mb-1"
+          >
+            Get Involved
+          </button>
+          </div>
+        </div>
+
+        <div class="">
+            <img src="./assets/hero-leaf2.png" alt="" />
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+
+    </main>
+
     <script src="./index.js"></script>
-</body>
-    
+  </body>
 </html>

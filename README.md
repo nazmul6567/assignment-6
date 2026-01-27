@@ -153,14 +153,7 @@ Clicking a tree name on a card opens a modal with full tree details.
 
         JavaScript (Vanilla only, no frameworks)
 
-📌 Rules
-✅ At least 5 meaningful commits
-
-❌ No dummy text or Lorem Ipsum — must use relevant content
-
-
-
-
+\
 
 ## 🔗 Submission
 - **Live Link :** YOUR_DEPLOYED_URL_HERE  
