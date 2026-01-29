@@ -92,7 +92,7 @@
     </header>
 
     <!-- banner -->
-    <div class="bg-[#CFF0DC] mx-1 lg:mx-2 my-1 lg:my-2 flex justify-between">
+    <div class="hidden bg-[#CFF0DC] mx-1 md:mx-2 mt-2  flex justify-between">
       <div class="flex items-center justify-center">
         <img class="h-full" src="./assets/hero-leaf1.png" alt="" />
       </div>
@@ -121,18 +121,93 @@
     </div>
 
     <!-- main section -->
-    <main class="mt-10 w-11/12 mx-auto min-h-screen py-4">
-      <!-- dynamic sectiion -->
-      <section class="grid grid-cols-12 gap-5">
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
+    <main class="md:mt-20 w-11/12 mx-auto p-5 md:p-0 ">
+      <h2 class="font-semibold text-3xl text-center mb-6 md:mb-10">
+        Choose Your Trees
+      </h2>
+    <!-- <button class="btn" onclick="my_modal.showModal()">open modal</button> -->
+    <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="details-container" class="px-2 space-y-1.5"></div>
+
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn ">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+      <!-- dynamic section -->
+      <section class="lg:grid grid-cols-12 gap-5 mb-24">
+        <!-- category side-->
+        <div class=" col-span-2 my-5 md:my-0">
+          <h2 class="text-2xl lg:text-xl font-bold lg:font-semibold mb-4 md:mb-2 text-center lg:text-start ">Categories</h2>
+
+          <!--category container -->
+          <div id="categories" class=" flex flex-wrap justify-center lg:flex-col gap-3 md:gap-0.5">
+            <!-- cart -->
+            <div id="btn-all-trees" class="p-2 rounded cursor-pointer hover:bg-green-500 hover:text-white">All Tress</div>
+          </div>
+        </div>
+
+
+
+        <!-- middle section -->
+        <div  class="col-span-8 my-5 md:my-0">
+
+          <!-- Plants section -->
+          <div id="all-plants" class="grid  md:grid-cols-3 gap-6 md:3">
+
+            <!-- cart -->
+            <!-- <div class="  px-3 py-2 rounded-lg bg-white shadow-lg">
+              <img src="./assets/about.png" alt="">
+              <h2 class="font-semibold my-1">Mango Tree</h2>
+              <p class="text-sm">A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green</p>
+              <div class="flex justify-between items-center my-2">
+                 <div class="badge rounded-full bg-green-300 text-green-700">Fruit Tree</div>
+                <p class="font-semibold text-sm py-1">৳500</p>
+              </div>
+              <button class="bg-green-700 text-white px-1.5 py-0.5 w-full rounded-full font-medium">Add to Cart</button>
+            </div> -->
+
+          </div>
+        </div>
+
+        <!-- your cart section -->
+        <div class="col-span-2 bg-white p-2 lg:pt-0 rounded-xl shadow-lg md:shadow mt-10 lg:mt-0">
+          <h3 class="text-xl font-semibold my-1">Your Cart</h3>
+
+          <!-- cart -->
+          <div class="grid grid-cols-1 gap-2">
+            <div class="bg-[#F0FDF4]  p-2 rounded-lg relative">
+              <h2 class="font-semibold text-sm mb-1">Mango Tree</h2>
+              <p class="">৳500 x 1</p>
+              <span class="absolute top-5 right-2"><i class="fa-solid fa-x"></i></span>
+            </div>
+            <div class="bg-[#F0FDF4]  p-2 rounded-lg relative">
+              <h2 class="font-semibold text-sm mb-1">Mango Tree</h2>
+              <p class="font-light">৳500 x 1</p>
+              <span class="absolute top-5 right-2"><i class="fa-solid fa-x"></i></span>
+            </div>
+          </div>
+
+          <!-- total -->
+           <hr class="my-2">
+           <div class="flex justify-between">
+            <p class="font-medium">Total:</p>
+            <p class="font-medium">৳1000</p>
+           </div>
+        </div>
       </section>
 
-      <!-- About Campaign -->
-      <section class="w-2/3 mx-auto">
-        <div class="my-10">
-          <h2 class="font-semibold md:font-bold text-3xl text-center">
+    </main>
+
+     <!-- About Campaign -->
+      <section class=" hidden w-2/3 mx-auto">
+        <div class=" md:my-10">
+          <h2 class="font-semibold md:font-bold text-3xl mb-6 text-center">
             About the Campaign
           </h2>
         </div>
@@ -160,12 +235,11 @@
           </div>
         </div>
       </section>
-    </main>
 
     <!-- our impact -->
-    <section class="bg-[#CFF0DC] mt-24 py-24 px-32">
+    <section class="hidden bg-[#CFF0DC] mt-24 py-15 md:py-24 px-5 md:px-32">
       <h2 class="font-semibold text-3xl text-center mb-10">Our Impact</h2>
-
+      <!-- cart container -->
       <div class="grid md:grid-cols-3 gap-12">
         <!-- cart -->
         <div
@@ -202,10 +276,9 @@
     </section>
 
     <!-- Plant a Tree Today Section -->
-    <section
-      class="bg-[#166534] flex justify-center items-center text-center py-16 px-5"
+    <section class="hidden bg-[#166534] flex justify-center items-center text-center py-16 px-5"
     >
-      <div class="w-full max-w-md">
+      <div class="w-full max-w-xl">
         <h2 class="font-semibold text-2xl md:text-3xl text-white mb-6 md:mb-8">
           Plant a Tree Today
         </h2>
@@ -220,7 +293,7 @@
           <input
             type="email"
             class="input w-full mb-3"
-            placeholder="Your Email"
+            placeholder="Your Email Address"
           />
 
           <select
@@ -244,8 +317,9 @@
     <footer class="bg-[#14532D] text-center text-sm text-white py-4">
       &copy; 2025 Green Earth. All Rights Reserved.
     </footer>
+
     <script src="./index.js"></script>
+
+    
   </body>
-  <!--5) Plant a Tree Today Section & Footer -
-      **Form**: Name, Email, Number of Trees - **Footer** with copyright info -->
 </html>
