@@ -92,7 +92,7 @@
     </header>
 
     <!-- banner -->
-    <div class="hidden bg-[#CFF0DC] mx-1 md:mx-2 mt-2  flex justify-between">
+    <div class="bg-[#CFF0DC] mx-1 md:mx-2 mt-2 flex justify-between">
       <div class="flex items-center justify-center">
         <img class="h-full" src="./assets/hero-leaf1.png" alt="" />
       </div>
@@ -121,45 +121,40 @@
     </div>
 
     <!-- main section -->
-    <main class="md:mt-20 w-11/12 mx-auto p-5 md:p-0 ">
+    <main class="md:mt-20 w-11/12 mx-auto p-5 md:p-0">
       <h2 class="font-semibold text-3xl text-center mb-6 md:mb-10">
         Choose Your Trees
       </h2>
-    <!-- <button class="btn" onclick="my_modal.showModal()">open modal</button> -->
-    <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
-      <div class="modal-box">
-        <div id="details-container" class="px-2 space-y-1.5"></div>
-
-        <div class="modal-action">
-          <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
-            <button class="btn ">Close</button>
-          </form>
-        </div>
-      </div>
-    </dialog>
 
       <!-- dynamic section -->
       <section class="lg:grid grid-cols-12 gap-5 mb-24">
         <!-- category side-->
-        <div class=" col-span-2 my-5 md:my-0">
-          <h2 class="text-2xl lg:text-xl font-bold lg:font-semibold mb-4 md:mb-2 text-center lg:text-start ">Categories</h2>
+        <div class="col-span-2 my-5 md:my-0">
+          <h2
+            class="text-2xl lg:text-xl font-bold lg:font-semibold mb-4 md:mb-2 text-center lg:text-start"
+          >
+            Categories
+          </h2>
 
           <!--category container -->
-          <div id="categories" class=" flex flex-wrap justify-center lg:flex-col gap-3 md:gap-0.5">
+          <div
+            id="categories"
+            class="flex flex-wrap justify-center lg:flex-col gap-3 md:gap-0.5"
+          >
             <!-- cart -->
-            <div id="btn-all-trees" class="p-2 rounded cursor-pointer hover:bg-green-500 hover:text-white">All Tress</div>
+            <div
+              id="btn-all-trees"
+              class="p-2 rounded active1 cursor-pointer hover:bg-green-500 hover:text-white"
+            >
+              All Tress
+            </div>
           </div>
         </div>
 
-
-
         <!-- middle section -->
-        <div  class="col-span-8 my-5 md:my-0">
-
+        <div class="col-span-8 my-5 md:my-0">
           <!-- Plants section -->
-          <div id="all-plants" class="grid  md:grid-cols-3 gap-6 md:3">
-
+          <div id="all-plants" class="grid md:grid-cols-3 gap-6">
             <!-- cart -->
             <!-- <div class="  px-3 py-2 rounded-lg bg-white shadow-lg">
               <img src="./assets/about.png" alt="">
@@ -171,73 +166,61 @@
               </div>
               <button class="bg-green-700 text-white px-1.5 py-0.5 w-full rounded-full font-medium">Add to Cart</button>
             </div> -->
-
           </div>
         </div>
 
         <!-- your cart section -->
-        <div class="col-span-2 bg-white p-2 lg:pt-0 rounded-xl shadow-lg md:shadow mt-10 lg:mt-0">
+        <div
+          class="col-span-2 bg-white p-2 lg:pt-0 rounded-xl shadow-lg md:shadow mt-10 lg:mt-0"
+        >
           <h3 class="text-xl font-semibold my-1">Your Cart</h3>
 
           <!-- cart -->
-          <div class="grid grid-cols-1 gap-2">
-            <div class="bg-[#F0FDF4]  p-2 rounded-lg relative">
-              <h2 class="font-semibold text-sm mb-1">Mango Tree</h2>
-              <p class="">৳500 x 1</p>
-              <span class="absolute top-5 right-2"><i class="fa-solid fa-x"></i></span>
-            </div>
-            <div class="bg-[#F0FDF4]  p-2 rounded-lg relative">
-              <h2 class="font-semibold text-sm mb-1">Mango Tree</h2>
-              <p class="font-light">৳500 x 1</p>
-              <span class="absolute top-5 right-2"><i class="fa-solid fa-x"></i></span>
-            </div>
-          </div>
+          <div id="cart-container" class="grid grid-cols-1 gap-2"></div>
 
           <!-- total -->
-           <hr class="my-2">
-           <div class="flex justify-between">
+          <hr class="my-2" />
+          <div class="flex justify-between">
             <p class="font-medium">Total:</p>
-            <p class="font-medium">৳1000</p>
-           </div>
+            <p class="font-medium">৳<span id="cart-total">0</span></p>
+          </div>
         </div>
       </section>
-
     </main>
 
-     <!-- About Campaign -->
-      <section class=" hidden w-2/3 mx-auto">
-        <div class=" md:my-10">
-          <h2 class="font-semibold md:font-bold text-3xl mb-6 text-center">
-            About the Campaign
-          </h2>
+    <!-- About Campaign -->
+    <section class="w-2/3 mx-auto">
+      <div class="md:my-10">
+        <h2 class="font-semibold md:font-bold text-3xl mb-6 text-center">
+          About the Campaign
+        </h2>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-7">
+        <div class="flex-1 img">
+          <img class="" src="./assets/about.png" alt="" />
         </div>
 
-        <div class="flex flex-col md:flex-row gap-7">
-          <div class="flex-1 img">
-            <img class="" src="./assets/about.png" alt="" />
-          </div>
-
-          <div class="flex-1 flex items-center">
-            <div class="grid grid-cols-1 gap-2">
-              <p>
-                Green Earth is a global tree plantation initiative dedicated to
-                fighting climate change. Since our start, we’ve planted over
-                500,000 trees worldwide. By joining our campaign, you help
-                restore forests, create habitats for wildlife, and combat global
-                warming.
-              </p>
-              <ul class="list-disc ml-5">
-                <li>Restoration of natural habitats</li>
-                <li>Improvement of air quality</li>
-                <li>Support for local communities</li>
-              </ul>
-            </div>
+        <div class="flex-1 flex items-center">
+          <div class="grid grid-cols-1 gap-2">
+            <p>
+              Green Earth is a global tree plantation initiative dedicated to
+              fighting climate change. Since our start, we’ve planted over
+              500,000 trees worldwide. By joining our campaign, you help restore
+              forests, create habitats for wildlife, and combat global warming.
+            </p>
+            <ul class="list-disc ml-5">
+              <li>Restoration of natural habitats</li>
+              <li>Improvement of air quality</li>
+              <li>Support for local communities</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
     <!-- our impact -->
-    <section class="hidden bg-[#CFF0DC] mt-24 py-15 md:py-24 px-5 md:px-32">
+    <section class="bg-[#CFF0DC] mt-24 py-15 md:py-24 px-5 md:px-32">
       <h2 class="font-semibold text-3xl text-center mb-10">Our Impact</h2>
       <!-- cart container -->
       <div class="grid md:grid-cols-3 gap-12">
@@ -276,7 +259,8 @@
     </section>
 
     <!-- Plant a Tree Today Section -->
-    <section class="hidden bg-[#166534] flex justify-center items-center text-center py-16 px-5"
+    <section
+      class="bg-[#166534] flex justify-center items-center text-center py-16 px-5"
     >
       <div class="w-full max-w-xl">
         <h2 class="font-semibold text-2xl md:text-3xl text-white mb-6 md:mb-8">
@@ -318,8 +302,20 @@
       &copy; 2025 Green Earth. All Rights Reserved.
     </footer>
 
-    <script src="./index.js"></script>
+    <!-- <button class="btn" onclick="my_modal.showModal()">open modal</button> -->
+    <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="details-container" class="px-2 space-y-1.5"></div>
 
-    
-  </body>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+  </body> 
+
+  <script src="./index.js"></script>
 </html>
