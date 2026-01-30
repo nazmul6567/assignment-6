@@ -6,9 +6,9 @@ const cannot be reassigned. We should use it by default unless value must change
 
 #### 2) What is the difference between map(), forEach(), and filter()? 
 Ans: 
-map transforms data and returns a new array of the same length.
-forEach returns nothing, loops through items.
-filter returns a new array but only with items that pass a condition.
+Map transforms data and returns a new array of the same length.
+ForEach returns nothing, loops through items.
+Filter returns a new array but only with items that pass a condition.
 
 #### 3) What are arrow functions in ES6?
 Ans:
