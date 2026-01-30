@@ -1,4 +1,6 @@
 document.getElementById('btn-all-trees').addEventListener('click', e => {
+  showLoader();
+
   document.querySelectorAll('.active1').forEach(btn => {
     btn.classList.remove('active1');
   });
@@ -9,15 +11,24 @@ document.getElementById('btn-all-trees').addEventListener('click', e => {
   const url = 'https://openapi.programming-hero.com/api/plants';
   fetch(url)
     .then(res => res.json())
-    .then(data => displayAllPlants(data.plants));
+    .then(data => {
+      displayAllPlants(data.plants);
+      hideLoader();
+    });
 });
-
 document.getElementById('all-plants').addEventListener('click', e => {
   // console.log(e.target.innerText)
   if (e.target.innerText === 'Add to Cart') {
     addToCart(e);
   }
 });
+
+const showLoader = () => {
+  document.getElementById('spinner').classList.remove('hidden');
+};
+const hideLoader = () => {
+  document.getElementById('spinner').classList.add('hidden');
+};
 
 let carts = [];
 let total = 0;
@@ -82,10 +93,15 @@ const removeCart = deleteBtn => {
 };
 
 const loadAllPlants = () => {
+  showLoader();
+
   const url = 'https://openapi.programming-hero.com/api/plants';
   fetch(url)
     .then(res => res.json())
-    .then(data => displayAllPlants(data.plants));
+    .then(data => {
+      displayAllPlants(data.plants);
+      hideLoader();
+    });
 };
 
 const loadAllCategories = () => {
@@ -96,8 +112,8 @@ const loadAllCategories = () => {
 };
 
 const loadPlantsByCategories = id => {
+  showLoader();
   const url = `https://openapi.programming-hero.com/api/category/${id}`;
-
   fetch(url)
     .then(res => res.json())
     .then(data => {
@@ -111,6 +127,7 @@ const loadPlantsByCategories = id => {
       btnClick.classList.add('active1');
 
       displayPlantsByCategories(data.plants);
+      hideLoader();
     });
 };
 
